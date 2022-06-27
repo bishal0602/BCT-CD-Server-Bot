@@ -91,7 +91,7 @@ const wednesday = [
     period: "3rd Period",
     subject: "Math",
     teacher: "HG",
-    time: "1:35-3:25",
+    time: "1:35-2:25",
   },
   {
     period: "4th Period",
