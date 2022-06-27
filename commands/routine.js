@@ -146,7 +146,7 @@ module.exports = {
       });
     } else if (
       text.toLowerCase() === "fri" ||
-      text.toLowerCase() === "Friday" ||
+      text.toLowerCase() === "friday" ||
       (dayOfTheWeek === 5 && hour < 10) ||
       (dayOfTheWeek === 4 && hour >= 10)
     ) {
@@ -171,7 +171,7 @@ module.exports = {
       });
     } else if (
       text.toLowerCase() === "sat" ||
-      text.toLowerCase() === "Saturday" ||
+      text.toLowerCase() === "saturday" ||
       (dayOfTheWeek === 6 && hour < 10) ||
       (dayOfTheWeek === 5 && hour >= 10)
     ) {
