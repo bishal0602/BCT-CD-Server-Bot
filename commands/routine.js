@@ -21,7 +21,7 @@ module.exports = {
 
     if (
       text.toLowerCase() === "sun" ||
-      text.toLowerCase() === "sun" ||
+      text.toLowerCase() === "sunday" ||
       (dayOfTheWeek === 0 && hour < 10) ||
       (dayOfTheWeek === 6 && hour >= 10)
     ) {
