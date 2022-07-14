@@ -3,7 +3,7 @@ const sunday = [
     period: "1st Period",
     subject: "Physics",
     teacher: "GNL",
-    time: "10:15 - 11:55",
+    time: "10:15-11:55",
   },
   {
     period: "2nd Period",
@@ -13,7 +13,7 @@ const sunday = [
   },
   {
     period: "Break",
-    time: "12-45 - 1:35",
+    time: "12-45-1:35",
   },
   {
     period: "3rd Period",
@@ -37,7 +37,7 @@ const monday = [
   {
     period: "1st Period",
     subject: "Basic Electrical Lab (Alternate Week)",
-    time: "10:15 - 12:45",
+    time: "10:15-12:45",
   },
 ];
 
@@ -46,7 +46,7 @@ const tuesday = [
     period: "1st Period",
     subject: "Basic Electrical",
     teacher: "SK",
-    time: "10:15 - 11:55",
+    time: "10:15-11:55",
   },
   {
     period: "2nd Period",
@@ -56,7 +56,7 @@ const tuesday = [
   },
   {
     period: "Break",
-    time: "12-45 - 1:35",
+    time: "12-45-1:35",
   },
   {
     period: "3rd Period",
@@ -75,7 +75,7 @@ const wednesday = [
     period: "1st Period",
     subject: "Basic Electrical",
     teacher: "SK",
-    time: "10:15 - 11:55",
+    time: "10:15-11:55",
   },
   {
     period: "2nd Period",
@@ -85,7 +85,7 @@ const wednesday = [
   },
   {
     period: "Break",
-    time: "12-45 - 1:35",
+    time: "12-45-1:35",
   },
   {
     period: "3rd Period",
@@ -112,7 +112,7 @@ const thursday = [
     period: "1st Period",
     subject: "Math",
     teacher: "GG",
-    time: "10:15 - 11:05",
+    time: "10:15-11:05",
   },
   {
     period: "2nd Period",
@@ -122,7 +122,7 @@ const thursday = [
   },
   {
     period: "Break",
-    time: "12-45 - 1:35",
+    time: "12-45-1:35",
   },
   {
     period: "3rd Period",
@@ -140,7 +140,7 @@ const friday = [
     period: "1st Period",
     subject: "Math",
     teacher: "SD",
-    time: "10:15 - 11:55",
+    time: "10:15-11:55",
   },
   {
     period: "2nd Period",
@@ -150,7 +150,7 @@ const friday = [
   },
   {
     period: "Break",
-    time: "12-45 - 1:35",
+    time: "12-45-1:35",
   },
   {
     period: "3rd Period",
@@ -161,7 +161,7 @@ const friday = [
   {
     period: "4th Period",
     subject: "Applied Mechanics",
-    teacher: "GSB",
+    teacher: "AK",
     time: "3:15-4:55",
   },
 ];

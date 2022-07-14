@@ -14,7 +14,7 @@ module.exports = {
     // console.log(routineData);
     let date, dayOfTheWeek, hour;
     if (text == 0) {
-      date = new Date(message.createdTimestamp - 20000);
+      date = new Date(message.createdTimestamp);
       dayOfTheWeek = date.getDay();
       hour = date.getHours();
     }
