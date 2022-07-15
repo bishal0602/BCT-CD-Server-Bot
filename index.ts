@@ -1,8 +1,7 @@
-const DiscordJS = require("discord.js");
-const { Intents } = DiscordJS;
-const WOKCommands = require("wokcommands");
-const path = require("path");
-const dotenv = require("dotenv");
+import DiscordJS, { Intents } from "discord.js";
+import WOKCommands from "wokcommands";
+import path from "path";
+import dotenv from "dotenv";
 dotenv.config();
 
 const client = new DiscordJS.Client({
@@ -16,7 +15,7 @@ const client = new DiscordJS.Client({
 });
 
 client.on("ready", async () => {
-  client.user.setActivity("BCT at pulchowk", {
+  client.user?.setActivity("BCT at pulchowk", {
     type: "PLAYING",
   });
   new WOKCommands(client, {
@@ -24,6 +23,7 @@ client.on("ready", async () => {
     // featuresDir: path.join(__dirname, "features"),
     testServers: process.env.TEST_SERVERS,
     botOwners: process.env.BOT_OWNERS,
+    typeScript: true,
     // mongoUri: process.env.DB_CONNECT,
     disabledDefaultCommands: [
       "help",

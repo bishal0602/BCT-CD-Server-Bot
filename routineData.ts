@@ -1,4 +1,11 @@
-const sunday = [
+type Period = {
+  period: string;
+  subject?: string;
+  teacher?: string;
+  time: string;
+};
+
+const sunday: Period[] = [
   {
     period: "1st Period",
     subject: "Physics",
@@ -33,7 +40,7 @@ const sunday = [
   },
 ];
 
-const monday = [
+const monday: Period[] = [
   {
     period: "1st Period",
     subject: "Basic Electrical Lab (Alternate Week)",
@@ -41,7 +48,7 @@ const monday = [
   },
 ];
 
-const tuesday = [
+const tuesday: Period[] = [
   {
     period: "1st Period",
     subject: "Basic Electrical",
@@ -70,7 +77,7 @@ const tuesday = [
   },
 ];
 
-const wednesday = [
+const wednesday: Period[] = [
   {
     period: "1st Period",
     subject: "Basic Electrical",
@@ -107,7 +114,7 @@ const wednesday = [
   },
 ];
 
-const thursday = [
+const thursday: Period[] = [
   {
     period: "1st Period",
     subject: "Math",
@@ -135,7 +142,7 @@ const thursday = [
     time: "1:35-4:55",
   },
 ];
-const friday = [
+const friday: Period[] = [
   {
     period: "1st Period",
     subject: "Math",
@@ -166,4 +173,4 @@ const friday = [
   },
 ];
 
-module.exports = { sunday, monday, tuesday, wednesday, thursday, friday };
+export { sunday, monday, tuesday, wednesday, thursday, friday };

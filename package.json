@@ -4,16 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "devStart": "nodemon index.js"
+    "start": "node dist/index.js",
+    "postinstall": "tsc",
+    "devStart": "nodemon index.js",
+    "build": "tsc -p tsconfig.json"
   },
   "author": "bishal0602",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
+    "source-map-loader": "^4.0.0",
+    "ts-loader": "^9.3.1",
     "wokcommands": "^1.5.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.18",
+    "ts-node": "^10.9.1"
+  },
+  "engines": {
+    "node": "16.14.0"
   }
 }
