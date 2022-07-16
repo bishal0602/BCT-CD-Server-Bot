@@ -21,10 +21,14 @@ client.on("ready", async () => {
   new WOKCommands(client, {
     commandsDir: path.join(__dirname, "commands"),
     // featuresDir: path.join(__dirname, "features"),
+
     testServers: process.env.TEST_SERVERS,
     botOwners: process.env.BOT_OWNERS,
-    typeScript: true,
+
+    typeScript: false, // apparently since this project gets transpiled to js, setting ts true will cause the app to break in heroku
+
     // mongoUri: process.env.DB_CONNECT,
+
     disabledDefaultCommands: [
       "help",
       "channelonly",
