@@ -1,13 +1,7 @@
 import { ICommand } from "wokcommands";
 import { MessageEmbed } from "discord.js";
-import {
-  sunday,
-  monday,
-  tuesday,
-  wednesday,
-  thursday,
-  friday,
-} from "../routineData";
+import BCT078CDRoutine from "../routines/BCT078CD";
+import BCT078ABRoutine from "../routines/BCT078AB";
 
 type Period = {
   period: string;
@@ -20,6 +14,12 @@ type Routine = {
   name: string;
   value: string;
 };
+
+//Server IDS
+
+const TestServerId = process.env.TEST_SERVERS;
+const BCT078CDGuildId = "968674820038459432";
+const BCT078ABGuildId = "968674913642770462";
 
 // Get routine of a day by passing day as argument
 function getRoutine(Periods: Period[], day: string): MessageEmbed {
@@ -49,6 +49,22 @@ export default {
   testOnly: false,
 
   callback: ({ message, text }) => {
+    // Checks the server from where the message was sent and assigns the specific routine
+    let routine: Period[][] = [];
+    switch (message.guildId) {
+      case BCT078CDGuildId:
+        routine = BCT078CDRoutine;
+        break;
+      case BCT078ABGuildId:
+        routine = BCT078ABRoutine;
+        break;
+      default:
+        message.reply("Server not registered!");
+        return;
+    }
+    const [sunday, monday, tuesday, wednesday, thursday, friday] = routine;
+
+    // Getting the day when user doesn't specify a particular day
     let date: Date,
       dayOfTheWeek = -1,
       hour = -1; // -1 so it is never undefined yet never passes any condition unless provided a genuine value

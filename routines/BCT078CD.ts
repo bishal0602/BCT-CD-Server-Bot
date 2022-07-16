@@ -173,4 +173,6 @@ const friday: Period[] = [
   },
 ];
 
-export { sunday, monday, tuesday, wednesday, thursday, friday };
+const BCT078CDRoutine = [sunday, monday, tuesday, wednesday, thursday, friday];
+
+export default BCT078CDRoutine;
