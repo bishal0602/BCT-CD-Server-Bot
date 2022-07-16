@@ -22,9 +22,9 @@ type Routine = {
 };
 
 // Get routine of a day by passing day as argument
-function getRoutine(day: Period[]): MessageEmbed {
+function getRoutine(Periods: Period[], day: string): MessageEmbed {
   let routineArr: Routine[] = [];
-  day.forEach((period: Period) => {
+  Periods.forEach((period: Period) => {
     routineArr.push({
       name: period.subject
         ? `**${period.period}: ${period.subject}**`
@@ -34,11 +34,9 @@ function getRoutine(day: Period[]): MessageEmbed {
         : `Time: ${period.time}`,
     });
   });
-  let capitalizedDayName =
-    day.toString().charAt(0).toUpperCase() + day.slice(1); //Capitalizes first letter of the word
   const embedExample = new MessageEmbed()
     .setColor("#5D3FD3")
-    .setTitle(`${capitalizedDayName} Routine`)
+    .setTitle(`${day} Routine`)
     .setFields(routineArr);
   return embedExample;
 }
@@ -67,7 +65,7 @@ export default {
       (dayOfTheWeek === 6 && hour >= 10)
     ) {
       message.reply({
-        embeds: [getRoutine(sunday)],
+        embeds: [getRoutine(sunday, "Sunday")],
       });
     } else if (
       text.toLowerCase() === "mon" ||
@@ -76,7 +74,7 @@ export default {
       (dayOfTheWeek === 0 && hour >= 10)
     ) {
       message.reply({
-        embeds: [getRoutine(monday)],
+        embeds: [getRoutine(monday, "Monday")],
       });
     } else if (
       text.toLowerCase() === "tue" ||
@@ -85,7 +83,7 @@ export default {
       (dayOfTheWeek === 1 && hour >= 10)
     ) {
       message.reply({
-        embeds: [getRoutine(tuesday)],
+        embeds: [getRoutine(tuesday, "Tuesday")],
       });
     } else if (
       text.toLowerCase() === "wed" ||
@@ -94,7 +92,7 @@ export default {
       (dayOfTheWeek === 2 && hour >= 10)
     ) {
       message.reply({
-        embeds: [getRoutine(wednesday)],
+        embeds: [getRoutine(wednesday, "Wednesday")],
       });
     } else if (
       text.toLowerCase() === "thu" ||
@@ -103,7 +101,7 @@ export default {
       (dayOfTheWeek === 3 && hour >= 10)
     ) {
       message.reply({
-        embeds: [getRoutine(thursday)],
+        embeds: [getRoutine(thursday, "Thursday")],
       });
     } else if (
       text.toLowerCase() === "fri" ||
@@ -112,7 +110,7 @@ export default {
       (dayOfTheWeek === 4 && hour >= 10)
     ) {
       message.reply({
-        embeds: [getRoutine(friday)],
+        embeds: [getRoutine(friday, "Friday")],
       });
     } else if (
       text.toLowerCase() === "sat" ||
