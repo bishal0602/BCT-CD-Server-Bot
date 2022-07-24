@@ -34,11 +34,11 @@ function getRoutine(Periods: Period[], day: string): MessageEmbed {
         : `Time: ${period.time}`,
     });
   });
-  const embedExample = new MessageEmbed()
+  const embedRoutine = new MessageEmbed()
     .setColor("#5D3FD3")
     .setTitle(`${day} Routine`)
     .setFields(routineArr);
-  return embedExample;
+  return embedRoutine;
 }
 
 export default {
